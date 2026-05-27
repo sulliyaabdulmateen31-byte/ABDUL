@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MADARSA ISLAMIYA ARABIYA MAJLIS-E DAWATUL HAQQ PALANPUR</title>
+  <meta name="description" content="Premium Islamic madrasa website: courses, teachers, prayer timings, admissions and donations." />
+
+  <!-- Fonts (optional, still fast; falls back gracefully) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="bg" aria-hidden="true">
+    <canvas id="geoCanvas"></canvas>
+    <div class="pattern pattern--top"></div>
+    <div class="pattern pattern--bottom"></div>
+    <div class="ambient" id="ambientGlow"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navbar -->
+  <header class="navbar" id="siteNavbar">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <div class="logo">MADARASA</div>
+        <div class="brand-text">
+          <div class="brand-title">MADARSA ISLAMIYA ARABIYA</div>
+          <div class="brand-subtitle">مجلس دعوۃ الحق پالنپور</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#teachers" class="nav-link">Teachers</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#timings" class="nav-link">Prayer Timings</a>
+        <a href="#admission" class="nav-link">Admission</a>
+        <a href="#donation" class="nav-link">Donation</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span class="icon" aria-hidden="true">◐</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-mobile" id="navMobile">
+      <div class="nav-mobile-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#teachers" class="nav-link">Teachers</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#timings" class="nav-link">Prayer Timings</a>
+        <a href="#admission" class="nav-link">Admission</a>
+        <a href="#donation" class="nav-link">Donation</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="kicker" data-reveal="up">
+            <span class="kicker-dot"></span>
+            <span>Islamic Education • Silsila &amp; Ihsan</span>
+          </div>
+          <h1 class="hero-title" data-reveal="up">
+            MADARSA ISLAMIYA ARABIYA<br />
+            <span class="gold">مجلس دعوۃ الحق</span> PALANPUR
+          </h1>
+          <p class="hero-lead" data-reveal="up">
+            A premium learning atmosphere for Quran, Hadith, Arabic grammar, fiqh, and moral refinement—built on sincerity and disciplined study.
+          </p>
+
+          <div class="hero-cta" data-reveal="up">
+            <a class="btn btn-primary" href="#admission">Admission Open</a>
+            <a class="btn btn-ghost" href="#courses">Explore Courses</a>
+          </div>
+
+          <div class="hero-stats" data-reveal="up">
+            <div class="stat glass">
+              <div class="stat-num" data-count="12">0</div>
+              <div class="stat-label">Years of Service</div>
+            </div>
+            <div class="stat glass">
+              <div class="stat-num" data-count="45">0</div>
+              <div class="stat-label">Students &amp; Mentorship</div>
+            </div>
+            <div class="stat glass">
+              <div class="stat-num" data-count="9">0</div>
+              <div class="stat-label">Core Subjects</div>
+            </div>
+          </div>
+
+          <div class="hero-note" data-reveal="up">
+            <div class="note-badge">المَدْرَسَة</div>
+            <div class="note-text">Luxury Islamic UI with glassmorphism, geometry patterns, and premium animations.</div>
+          </div>
+        </div>
+
+        <div class="hero-right" data-reveal="up">
+          <div class="hero-card glass hero-threewrap">
+            <div class="hero-card-top">
+              <div class="hero-logo" aria-hidden="true">
+                <img class="hero-logo-img" src="photo.png.jpeg" alt="Madrasa logo" />
+              </div>
+              <div class="hero-card-text">
+                <div class="hero-card-title">مدرسہ اسلامیہ عربیہ</div>
+                <div class="hero-card-subtitle">مدرسہ اسلامیہ عربیہ مجلس دعوۃ الحق پالنپور</div>
+              </div>
+            </div>
+
+            <div class="hero-three" id="threeScene" aria-hidden="true">
+              <div class="hero-shine"></div>
+            </div>
+
+            <div class="hero-card-bottom">
+              <div class="mini-item">
+                <span class="mini-icon">⟡</span>
+                <span>Islamic Geometry</span>
+              </div>
+              <div class="mini-item">
+                <span class="mini-icon">✦</span>
+                <span>Glass Cards</span>
+              </div>
+              <div class="mini-item">
+                <span class="mini-icon">⌁</span>
+                <span>Parallax Glow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <a href="#about" class="scroll-pill">Scroll</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">About Madrasa</h2>
+          <p class="section-sub">A disciplined academic environment with spiritual growth and practical character-building.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Quran &amp; Tajweed</h3>
+            <p class="card-text">Hifz, Nazra, Tajweed rules, and daily recital supervision—built on consistency.</p>
+            <div class="card-footer">Daily program • Mentor guidance</div>
+          </article>
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Hadith &amp; Dars</h3>
+            <p class="card-text">Core lessons from selected texts with focus on understanding, adab, and implementation.</p>
+            <div class="card-footer">Dars sessions • Review circles</div>
+          </article>
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Arabic &amp; Fiqh</h3>
+            <p class="card-text">Grammar foundations and fiqh fundamentals for accurate understanding and worship.</p>
+            <div class="card-footer">Arabic levels • Practical fiqh</div>
+          </article>
+        </div>
+
+        <div class="split" data-reveal="up">
+          <div class="split-left">
+            <div class="geo-badge">
+              <span class="geo-badge-icon">⟠</span>
+              <span class="geo-badge-text">Islamic Atmosphere • Modern Discipline</span>
+            </div>
+            <h3 class="split-title">A premium learning journey with heart-led scholarship</h3>
+            <p class="split-text">
+              We teach with clarity, sincerity, and structured revision. The goal is not only knowledge, but character—so students grow as learners and believers.
+            </p>
+
+            <ul class="list-check">
+              <li><span>Mentorship &amp; monitoring</span></li>
+              <li><span>Adab-first environment</span></li>
+              <li><span>Timely revision &amp; assessments</span></li>
+              <li><span>Community support &amp; istiqamah</span></li>
+            </ul>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#courses">View Courses</a>
+              <a class="btn btn-ghost" href="#contact">Talk to Us</a>
+            </div>
+          </div>
+
+          <div class="split-right glass">
+            <div class="quote">
+              <div class="quote-mark">❝</div>
+              <p class="quote-text">
+                Seek knowledge for the pleasure of Allah—then let your manners speak the lesson.
+              </p>
+              <div class="quote-author">— Madrasa Teaching Philosophy</div>
+            </div>
+            <div class="timeline">
+              <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                  <div class="time-title">Morning Sessions</div>
+                  <div class="time-sub">Recitation, tajweed, and core learning</div>
+                </div>
+              </div>
+              <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                  <div class="time-title">Afternoon Dars</div>
+                  <div class="time-sub">Hadith, fiqh, and Arabic training</div>
+                </div>
+              </div>
+              <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                  <div class="time-title">Evening Review</div>
+                  <div class="time-sub">Revision circles and memorization support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Courses</h2>
+          <p class="section-sub">Choose a pathway and progress through structured levels.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Hifz Program</h3>
+            <p class="card-text">Memorization with daily targets and revision loops.</p>
+            <div class="pill-row"><span class="pill">Mentor</span><span class="pill">Tajweed</span></div>
+          </article>
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Nazra &amp; Tajweed</h3>
+            <p class="card-text">Correct pronunciation with progressive readings.</p>
+            <div class="pill-row"><span class="pill">Ihkam</span><span class="pill">Qiraat</span></div>
+          </article>
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Arabic Sarf &amp; Nahw</h3>
+            <p class="card-text">Grammar foundations and guided practice.</p>
+            <div class="pill-row"><span class="pill">Levels</span><span class="pill">Exercises</span></div>
+          </article>
+          <article class="card glass" data-reveal="up">
+            <h3 class="card-title">Fiqh &amp; Akhlaq</h3>
+            <p class="card-text">Practical worship, ethics, and daily discipline.</p>
+            <div class="pill-row"><span class="pill">Adab</span><span class="pill">Practice</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teachers -->
+    <section class="section" id="teachers">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Teachers</h2>
+          <p class="section-sub">A team of committed educators and spiritual mentors.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="teacher glass" data-reveal="up">
+            <div class="teacher-img" aria-hidden="true"></div>
+            <div class="teacher-body">
+              <h3 class="teacher-name">Ustadh 1</h3>
+              <div class="teacher-role">Quran • Tajweed</div>
+              <p class="teacher-bio">Focused recitation training with adab-led guidance.</p>
+            </div>
+          </article>
+          <article class="teacher glass" data-reveal="up">
+            <div class="teacher-img teacher-img--2" aria-hidden="true"></div>
+            <div class="teacher-body">
+              <h3 class="teacher-name">Ustadh 2</h3>
+              <div class="teacher-role">Hadith • Dars</div>
+              <p class="teacher-bio">Structured lessons and comprehension-based teaching.</p>
+            </div>
+          </article>
+          <article class="teacher glass" data-reveal="up">
+            <div class="teacher-img teacher-img--3" aria-hidden="true"></div>
+            <div class="teacher-body">
+              <h3 class="teacher-name">Ustadh 3</h3>
+              <div class="teacher-role">Arabic</div>
+              <p class="teacher-bio">Sarf &amp; Nahw foundations with progressive practice.</p>
+            </div>
+          </article>
+          <article class="teacher glass" data-reveal="up">
+            <div class="teacher-img teacher-img--4" aria-hidden="true"></div>
+            <div class="teacher-body">
+              <h3 class="teacher-name">Ustadh 4</h3>
+              <div class="teacher-role">Fiqh • Akhlaq</div>
+              <p class="teacher-bio">Practical worship and character refinement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Gallery</h2>
+          <p class="section-sub">Placeholder cards—replace with real madrasa photos later.</p>
+        </div>
+
+        <div class="gallery-grid" aria-label="Gallery">
+          <div class="gallery-card glass" data-reveal="up">
+            <div class="gallery-thumb" data-placeholder="Mosque Pattern A"></div>
+            <div class="gallery-meta">
+              <div class="gallery-title">Classroom • Learning</div>
+              <div class="gallery-sub">Coming soon</div>
+            </div>
+          </div>
+          <div class="gallery-card glass" data-reveal="up">
+            <div class="gallery-thumb" data-placeholder="Islamic Art B"></div>
+            <div class="gallery-meta">
+              <div class="gallery-title">Hifz Session</div>
+              <div class="gallery-sub">Coming soon</div>
+            </div>
+          </div>
+          <div class="gallery-card glass" data-reveal="up">
+            <div class="gallery-thumb" data-placeholder="Geometric C"></div>
+            <div class="gallery-meta">
+              <div class="gallery-title">Evening Review</div>
+              <div class="gallery-sub">Coming soon</div>
+            </div>
+          </div>
+          <div class="gallery-card glass" data-reveal="up">
+            <div class="gallery-thumb" data-placeholder="Arabic Calligraphy D"></div>
+            <div class="gallery-meta">
+              <div class="gallery-title">Dars &amp; Adab</div>
+              <div class="gallery-sub">Coming soon</div>
+            </div>
+          </div>
+          <div class="gallery-card glass" data-reveal="up">
+            <div class="gallery-thumb" data-placeholder="Golden Motif E"></div>
+            <div class="gallery-meta">
+              <div class="gallery-title">Community Support</div>
+              <div class="gallery-sub">Coming soon</div>
+            </div>
+          </div>
+          <div class="gallery-card glass" data-reveal="up">
+            <div class="gallery-thumb" data-placeholder="Pattern F"></div>
+            <div class="gallery-meta">
+              <div class="gallery-title">Prayer Atmosphere</div>
+              <div class="gallery-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prayer Timings -->
+    <section class="section" id="timings">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Prayer Timings</h2>
+          <p class="section-sub">Example timings (update later with your local schedule).</p>
+        </div>
+
+        <div class="timings-wrap glass" data-reveal="up">
+          <div class="timings-grid" role="table" aria-label="Prayer timings">
+            <div class="time-row" role="row">
+              <div class="time-name" role="cell">Fajr</div>
+              <div class="time-val" role="cell"><span class="time-pill" id="fajrTime">05:10</span></div>
+            </div>
+            <div class="time-row" role="row">
+              <div class="time-name" role="cell">Dhuhr</div>
+              <div class="time-val" role="cell"><span class="time-pill">12:30</span></div>
+            </div>
+            <div class="time-row" role="row">
+              <div class="time-name" role="cell">Asr</div>
+              <div class="time-val" role="cell"><span class="time-pill">16:10</span></div>
+            </div>
+            <div class="time-row" role="row">
+              <div class="time-name" role="cell">Maghrib</div>
+              <div class="time-val" role="cell"><span class="time-pill">18:45</span></div>
+            </div>
+            <div class="time-row" role="row">
+              <div class="time-name" role="cell">Isha</div>
+              <div class="time-val" role="cell"><span class="time-pill" id="ishaTime">20:10</span></div>
+            </div>
+          </div>
+
+          <div class="timings-side">
+            <div class="next-prayer">
+              <div class="np-label">Next Prayer</div>
+              <div class="np-value" id="nextPrayer">Maghrib</div>
+              <div class="np-time" id="nextPrayerTime">18:45</div>
+            </div>
+            <div class="hint">Auto-highlight next prayer with smooth JS animations.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admission Form -->
+    <section class="section" id="admission">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Admission Form</h2>
+          <p class="section-sub">Fill the form to request admission. (Demo form—no backend.)</p>
+        </div>
+
+        <form class="form glass" data-reveal="up" id="admissionForm">
+          <div class="form-grid">
+            <label class="field">
+              <span class="label">Student Name</span>
+              <input name="studentName" class="input" type="text" placeholder="Full name" required />
+            </label>
+
+            <label class="field">
+              <span class="label">Father/Mother Name</span>
+              <input name="guardianName" class="input" type="text" placeholder="Guardian name" required />
+            </label>
+
+            <label class="field">
+              <span class="label">Age</span>
+              <input name="age" class="input" type="number" min="4" max="30" placeholder="e.g., 12" required />
+            </label>
+
+            <label class="field">
+              <span class="label">Class/Level</span>
+              <select name="level" class="input" required>
+                <option value="">Select level</option>
+                <option>Beginner (Nazra)</option>
+                <option>Hifz</option>
+                <option>Arabic Basics</option>
+                <option>Advanced Arabic</option>
+                <option>Hadith &amp; Fiqh</option>
+              </select>
+            </label>
+
+            <label class="field span-2">
+              <span class="label">Address</span>
+              <input name="address" class="input" type="text" placeholder="Street / Area" required />
+            </label>
+
+            <label class="field">
+              <span class="label">Phone</span>
+              <input name="phone" class="input" type="tel" placeholder="WhatsApp / Mobile" required />
+            </label>
+
+            <label class="field">
+              <span class="label">Email (optional)</span>
+              <input name="email" class="input" type="email" placeholder="Email" />
+            </label>
+
+            <label class="field span-2">
+              <span class="label">Message</span>
+              <textarea name="message" class="input textarea" placeholder="Any notes or requirements" rows="4"></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Submit Request</button>
+            <div class="form-note" id="formStatus" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Donation -->
+    <section class="section" id="donation">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Donation</h2>
+          <p class="section-sub">Support Islamic education and community service. (Demo UI—no payments.)</p>
+        </div>
+
+        <div class="donation-wrap" data-reveal="up">
+          <div class="donation-left glass">
+            <div class="donation-title">Choose your sadaqah</div>
+            <div class="amount-row" role="group" aria-label="Donation amount">
+              <button type="button" class="amount-btn" data-amt="100">₹100</button>
+              <button type="button" class="amount-btn" data-amt="250">₹250</button>
+              <button type="button" class="amount-btn" data-amt="500">₹500</button>
+              <button type="button" class="amount-btn" data-amt="1000">₹1000</button>
+              <button type="button" class="amount-btn" data-amt="2000">₹2000</button>
+            </div>
+
+            <div class="custom-row">
+              <label class="field">
+                <span class="label">Custom Amount</span>
+                <input id="customAmount" class="input" type="number" min="1" placeholder="e.g., 750" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="label">Name (optional)</span>
+              <input id="donorName" class="input" type="text" placeholder="Your name" />
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="button" id="donateBtn">Continue</button>
+              <div class="form-note" id="donationStatus" aria-live="polite"></div>
+            </div>
+
+            <div class="fineprint">All donations are used for education, maintenance, and community programs.</div>
+          </div>
+
+          <div class="donation-right">
+            <div class="donation-card glass" data-parallax>
+              <div class="donation-card-top">
+                <div class="donation-chip">Premium Impact</div>
+                <div class="donation-badge">Gold • Green • Glass</div>
+              </div>
+              <div class="donation-visual" aria-hidden="true">
+                <div class="ring"></div>
+                <div class="ring ring--2"></div>
+                <div class="ring ring--3"></div>
+                <div class="donation-symbol">☪</div>
+              </div>
+              <div class="donation-metrics">
+                <div class="metric">
+                  <div class="metric-val" id="metricImpact">+0%</div>
+                  <div class="metric-label">Impact simulation</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-val">Fast • Secure UI</div>
+                  <div class="metric-label">No backend in demo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-sub">Send a message to the madrasa administration. (Demo form.)</p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="form glass" id="contactForm" data-reveal="up">
+            <div class="form-grid">
+              <label class="field">
+                <span class="label">Name</span>
+                <input name="name" class="input" type="text" placeholder="Your name" required />
+              </label>
+
+              <label class="field">
+                <span class="label">Phone</span>
+                <input name="phone" class="input" type="tel" placeholder="Mobile" required />
+              </label>
+
+              <label class="field span-2">
+                <span class="label">Email (optional)</span>
+                <input name="email" class="input" type="email" placeholder="Email" />
+              </label>
+
+              <label class="field span-2">
+                <span class="label">Message</span>
+                <textarea name="message" class="input textarea" rows="5" placeholder="Your message" required></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <div class="form-note" id="contactStatus" aria-live="polite"></div>
+            </div>
+          </form>
+
+          <aside class="contact-aside" data-reveal="up">
+            <div class="info-card glass">
+              <div class="info-title">Address</div>
+              <div class="info-text">Palanpur • Gujarat (Update with exact location)</div>
+            </div>
+            <div class="info-card glass">
+              <div class="info-title">Call / WhatsApp</div>
+              <div class="info-text">+91 9XXXXXXXXX (Update)</div>
+            </div>
+            <div class="info-card glass">
+              <div class="info-title">Office Hours</div>
+              <div class="info-text">Morning to Evening</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img class="footer-logo" src="photo.png.jpeg" alt="Madrasa logo" />
+        </div>
+        <div class="footer-brand-title">MADARSA ISLAMIYA ARABIYA</div>
+        <div class="footer-brand-sub">مدرسہ اسلامیہ عربیہ مجلس دعوۃ الحق پالنپور</div>
+        <p class="footer-copy">Luxury Islamic UI • Premium animations • Glassmorphism &amp; geometric patterns</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-heading">Quick Links</div>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-heading">Admissions</div>
+          <a href="#admission">Admission Form</a>
+          <a href="#donation">Donation</a>
+          <a href="#timings">Prayer Timings</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-cta">
+        <div class="footer-heading">Get Updates</div>
+        <p class="footer-copy">Subscribe for announcements and class schedules. (Demo UI.)</p>
+        <form class="subscribe" id="subscribeForm">
+          <input class="subscribe-input" type="email" name="email" placeholder="Email address" required />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <div class="sub-note" id="subscribeStatus" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© <span id="year"></span> MADARSA ISLAMIYA ARABIYA. All rights reserved.</div>
+        <div class="footer-bottom-right">Designed with Islamic geometry • Gold &amp; Green palette</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for gallery (simple) -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content glass" role="dialog" aria-modal="true" aria-label="Gallery image">
+      <button class="modal-close" type="button" aria-label="Close" data-close-modal>✕</button>
+      <div class="modal-body">
+        <div class="modal-thumb" id="modalThumb"></div>
+        <div>
+          <div class="modal-title" id="modalTitle"></div>
+          <div class="modal-sub" id="modalSub"></div>
+          <div class="modal-hint">Replace placeholders with real images later.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
+
